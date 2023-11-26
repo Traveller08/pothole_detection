@@ -1,70 +1,3 @@
-# from kivymd.app import MDApp
-# from kivymd.uix.button import MDRaisedButton
-# from kivymd.uix.boxlayout import MDBoxLayout
-# from kivymd.uix.toolbar import MDTopAppBar
-# from kivy.uix.screenmanager import Screen
-# from kivy.uix.image import Image
-# from kivy.metrics import dp
-
-
-# class HomeScreen(Screen):
-#     def __init__(self, **kwargs):
-#         super(HomeScreen, self).__init__(**kwargs)
-#         self.is_camera_open = False
-
-#     def on_enter(self, *args):
-#         super().on_enter(*args)
-
-#         # Create the top app bar
-#         self.top_app_bar = MDTopAppBar(
-#             title="Pothole Detection",
-#             right_action_items=[
-#                 ["dots-vertical", lambda x: MDApp.get_running_app().callback_1()]
-#             ],
-#             pos_hint={"top": 1},
-#         )
-
-#         # Create the image widget
-#         self.image_widget = Image(
-#             source="your_image_source.png",
-#         )
-
-#         # Create the "Start Camera" button
-#         self.start_camera_button = MDRaisedButton(
-#             text="Start Camera",
-#             md_bg_color=MDApp.get_running_app().theme_cls.primary_color,
-#             pos_hint={"center_x": 0.5, "center_y": 0.1},
-#             on_release=self.toggle_camera,
-#         )
-
-#         # Create the main layout
-#         self.main_layout = MDBoxLayout(
-#             orientation="vertical",
-#             spacing=dp(10),
-#             padding=[dp(0), dp(0), dp(0), dp(10)],
-#             md_bg_color=(1, 1, 1, 1),  # White background color
-#         )
-
-#         # Add widgets to the main layout
-#         self.main_layout.add_widget(self.top_app_bar)
-#         self.main_layout.add_widget(self.image_widget)
-#         self.main_layout.add_widget(self.start_camera_button)
-
-#         self.add_widget(self.main_layout)
-
-#     def toggle_camera(self, *args):
-#         self.is_camera_open = not self.is_camera_open
-
-#         # Change button text based on the camera state
-#         if self.is_camera_open:
-#             self.start_camera_button.text = "Stop Camera"
-#         else:
-#             self.start_camera_button.text = "Start Camera"
-
-
-# # Replace "your_image_source.png" with the actual image source.
-
-
 import cv2 as cv
 import time
 import geocoder
@@ -104,9 +37,6 @@ class HomeScreen(Screen):
         # Create the top app bar
         self.top_app_bar = MDTopAppBar(
             title="Roadguard",
-            right_action_items=[
-                ["dots-vertical", lambda x: MDApp.get_running_app().callback_1()]
-            ],
             pos_hint={"top": 1},
         )
 
